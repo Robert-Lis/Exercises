@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Edit profile</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <h2>Edit profile</h2>
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td>
+                    <h:inputText label="Username"
+                                 id="username"
+                                 value="#{user.username}"
+                                 required="true"/>
+                    <h:message for="username" style="color: red"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <h:inputText label="Password"
+                                      id="password" value="#{user.password}"
+                                      required="true">
+                    </h:inputText>
+                    <h:message for="password" style="color: red"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>First Name:</td>
+                <td>
+                    <h:inputText label="First Name"
+                                 id="firstName" value="#{user.firstName}"
+                                 required="true">
+                    </h:inputText>
+                    <h:message for="firstName" style="color: red"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Last Name:</td>
+                <td>
+                    <h:inputText label="Last Name"
+                                 id="lastName" value="#{user.lastName}"
+                                 required="true">
+                    </h:inputText>
+                    <h:message for="lastName" style="color: red"/>
+                </td>
+            </tr>
+        </table>
+        <p><h:commandButton value="Submit" action="confirm" /></p>
+    </h:form>
+</h:body>
+</html>
